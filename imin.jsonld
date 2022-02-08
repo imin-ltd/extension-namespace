@@ -122,7 +122,7 @@
     },
     {
       "@id": "https://imin.co/CustomerCancellationPending",
-      "@type": "schema:OrderItemStatus",
+      "@type": "oa:OrderItemStatus",
       "label": "CustomerCancellationPending",
       "comment": "Customer cancellation pending but not yet complete"
     }
