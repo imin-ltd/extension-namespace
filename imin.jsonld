@@ -119,6 +119,12 @@
       "rangeIncludes": [
         "schema:Boolean"
       ]
+    },
+    {
+      "@id": "https://imin.co/CustomerCancellationPending",
+      "@type": "oa:OrderItemStatus",
+      "label": "CustomerCancellationPending",
+      "comment": "Customer cancellation pending but not yet complete"
     }
   ]
 }
