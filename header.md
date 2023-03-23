@@ -4,7 +4,7 @@ This repository holds the [JSON-LD definition](http://ns.imin.co/imin.jsonld) of
 
 imin works as part of the [OpenActive Community Group](https://www.w3.org/community/openactive) to promote the usecases represented by the properties within this namespace, with the intention of standardising them over time.
 
-This namespace MUST be referenced using the URL `"https://ns.imin.co/"` (which will return the [JSON-LD definition](http://ns.imin.co/imin.jsonld) if the `Accept` header contains `application/ld+json`), and is designed to be used in conjunction with the `"https://openactive.io/"` namespace.
+This namespace MUST be referenced using the URL `"https://imin.co/"` (which will return the [JSON-LD definition](http://ns.imin.co/imin.jsonld) if the `Accept` header contains `application/ld+json`), and is designed to be used in conjunction with the `"https://openactive.io/"` namespace.
 
 Please raise requests for content or issues related to the namespace via [GitHub](https://github.com/imin-ltd/extension-namespace/issues). 
 
@@ -13,7 +13,7 @@ Recommended usage as follows:
 {
   "@context": [
     "https://openactive.io/",
-    "https://ns.imin.co/"
+    "https://imin.co/"
   ],
   "type": "SessionSeries",
   "name": "Tai chi Class",
