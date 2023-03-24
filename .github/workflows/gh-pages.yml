@@ -16,6 +16,11 @@ jobs:
           header: header.md
           context: imin.jsonld
           with_issues: false
+          
+      - name: Add CNAME
+        run: echo 'ns.imin.co' > CNAME
+        working-directory: ./out
+          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
