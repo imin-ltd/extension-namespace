@@ -8,6 +8,15 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+          
+      - name: JSON-LD Lint
+        run: npx jsonld-cli lint imin.jsonld
+        
       - uses: actions/checkout@v2
       - name: Attempt Rendering of Documentation for Validation
         uses: openactive/extension-documentation-generator@master
