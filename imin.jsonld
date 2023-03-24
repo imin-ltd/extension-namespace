@@ -179,7 +179,9 @@
       "comment": "Links items found in the Firehose to items found in Search",
       "domainIncludes": [
         "oa:SessionSeries",
-        "oa:FacilityUse"
+        "oa:ScheduledSession",
+        "oa:FacilityUse",
+        "oa:Slot"
       ],
       "rangeIncludes": [
         "schema:String"
