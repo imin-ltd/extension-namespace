@@ -108,6 +108,18 @@
       "@container": "@list"
     },
     {
+      "@id": "imin:aggregateOffer",
+      "@type": "Property",
+      "label": "aggregateOffer",
+      "comment": "An AggregateOffer relating to the opportunity.",
+      "domainIncludes": [
+        "oa:Slot"
+      ],
+      "rangeIncludes": [
+        "schema:AggregateOffer"
+      ]
+    },
+    {
       "@id": "imin:presentAsSlots",
       "@type": "Property",
       "label": "presentAsSlots",
@@ -118,6 +130,59 @@
       ],
       "rangeIncludes": [
         "schema:Boolean"
+      ]
+    },
+    {
+      "@id": "imin:isPotentiallyBookable",
+      "@type": "Property",
+      "label": "isPotentiallyBookable",
+      "comment": "A field which indicates that an opportunity can be booked if other conditions are met.",
+      "domainIncludes": [
+        "oa:ScheduledSession",
+        "oa:Slot",
+        "schema:AggregateOffer"
+      ],
+      "rangeIncludes": [
+        "schema:Boolean"
+      ]
+    },
+    {
+      "@id": "imin:iminSearchId",
+      "@type": "Property",
+      "label": "iminSearchId",
+      "comment": "Links items found in the Firehose to items found in Search",
+      "domainIncludes": [
+        "oa:SessionSeries",
+        "oa:FacilityUse"
+      ],
+      "rangeIncludes": [
+        "schema:URL"
+      ]
+    },
+    {
+      "@id": "imin:dataSource",
+      "@type": "Property",
+      "label": "dataSource",
+      "comment": "Data source from which the opportunity originates",
+      "domainIncludes": [
+        "oa:SessionSeries",
+        "oa:FacilityUse"
+      ],
+      "rangeIncludes": [
+        "schema:Dataset"
+      ]
+    },
+    {
+      "@id": "imin:iminSearchId",
+      "@type": "Property",
+      "label": "iminSearchId",
+      "comment": "Links items found in the Firehose to items found in Search",
+      "domainIncludes": [
+        "oa:SessionSeries",
+        "oa:FacilityUse"
+      ],
+      "rangeIncludes": [
+        "schema:String"
       ]
     },
     {
