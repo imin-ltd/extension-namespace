@@ -19,7 +19,7 @@
       ]
     },
     {
-      "@id": "imin:publicJuniorPrice",
+      "@id": "imin2:publicJuniorPrice",
       "@type": "Property",
       "label": "publicJuniorPrice",
       "comment": "Price for junior non-members derived from the appropriate Offer.",
@@ -36,7 +36,7 @@
       "label": "membershipRequired",
       "comment": "Indicates whether this offer is only available to members.",
       "domainIncludes": [
-        "schema:Offer"
+        "schema2:Offer"
       ],
       "rangeIncludes": [
         "schema:Boolean"
@@ -45,7 +45,7 @@
     {
       "@id": "imin:fullAddress",
       "@type": "Property",
-      "label": "fullAddress",
+      "labels": "fullAddress",
       "comment": "Full address in one line.",
       "domainIncludes": [
         "schema:PostalAddress"
