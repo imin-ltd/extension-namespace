@@ -1,0 +1,184 @@
+{
+  "@context": [
+    "https://openactive.io/ns-extension",
+    {
+      "imin": "https://imin.co/"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "imin:publicAdultPrice",
+      "@type": "Property",
+      "label": "publicAdultPrice",
+      "comment": "Price for adult non-members derived from the appropriate Offer.",
+      "domainIncludes": [
+        "schema:AggregateOffer"
+      ],
+      "rangeIncludes": [
+        "schema:Float"
+      ]
+    },
+    {
+      "@id": "imin:publicJuniorPrice",
+      "@type": "Property",
+      "label": "publicJuniorPrice",
+      "comment": "Price for junior non-members derived from the appropriate Offer.",
+      "domainIncludes": [
+        "schema:AggregateOffer"
+      ],
+      "rangeIncludes": [
+        "schema:Float"
+      ]
+    },
+    {
+      "@id": "imin:membershipRequired",
+      "@type": "Property",
+      "label": "membershipRequired",
+      "comment": "Indicates whether this offer is only available to members.",
+      "domainIncludes": [
+        "schema:Offer"
+      ],
+      "rangeIncludes": [
+        "schema:Boolean"
+      ]
+    },
+    {
+      "@id": "imin:fullAddress",
+      "@type": "Property",
+      "label": "fullAddress",
+      "comment": "Full address in one line.",
+      "domainIncludes": [
+        "schema:PostalAddress"
+      ],
+      "rangeIncludes": [
+        "schema:String"
+      ]
+    },
+    {
+      "@id": "imin:level",
+      "@type": "Property",
+      "label": "level",
+      "comment": "The difficulty level of an Event, in a structured format.",
+      "domainIncludes": [
+        "schema:Event"
+      ],
+      "rangeIncludes": [
+        "imin:LevelType"
+      ],
+      "@container": "@list"
+    },
+    {
+      "@id": "imin:LevelType",
+      "@type": "Class",
+      "label": "LevelType",
+      "comment": "Structured difficulty levels with free-text labels to allow them to vary based on context.",
+      "subClassOf": [
+        "schema:StructuredValue"
+      ]
+    },
+    {
+      "@id": "https://imin.co/BeginnerLevel",
+      "@type": "imin:LevelType",
+      "label": "BeginnerLevel",
+      "comment": "Beginner difficulty level"
+    },
+    {
+      "@id": "https://imin.co/IntermediateLevel",
+      "@type": "imin:LevelType",
+      "label": "IntermediateLevel",
+      "comment": "Intermediate difficulty level"
+    },
+    {
+      "@id": "https://imin.co/AdvancedLevel",
+      "@type": "imin:LevelType",
+      "label": "AdvancedLevel",
+      "comment": "Advanced difficulty level"
+    },
+    {
+      "@id": "imin:aggregatedActivity",
+      "@type": "Property",
+      "label": "aggregatedActivity",
+      "comment": "An array containing all the activities that are found at a place.",
+      "domainIncludes": [
+        "schema:Place"
+      ],
+      "rangeIncludes": [
+        "skos:Concept"
+      ],
+      "@container": "@list"
+    },
+    {
+      "@id": "imin:aggregateOffer",
+      "@type": "Property",
+      "label": "aggregateOffer",
+      "comment": "An AggregateOffer relating to the opportunity.",
+      "domainIncludes": [
+        "oa:Slot"
+      ],
+      "rangeIncludes": [
+        "schema:AggregateOffer"
+      ]
+    },
+    {
+      "@id": "imin:presentAsSlots",
+      "@type": "Property",
+      "label": "presentAsSlots",
+      "comment": "A field which indicates whether or not this data is better consumed as slots data than sessions data.",
+      "domainIncludes": [
+        "pending:EventSeries",
+        "schema:Event"
+      ],
+      "rangeIncludes": [
+        "schema:Boolean"
+      ]
+    },
+    {
+      "@id": "imin:isPotentiallyBookable",
+      "@type": "Property",
+      "label": "isPotentiallyBookable",
+      "comment": "A field which indicates that an opportunity can be booked if other conditions are met.",
+      "domainIncludes": [
+        "oa:ScheduledSession",
+        "oa:Slot",
+        "schema:AggregateOffer"
+      ],
+      "rangeIncludes": [
+        "schema:Boolean"
+      ]
+    },
+    {
+      "@id": "imin:iminSearchId",
+      "@type": "Property",
+      "label": "iminSearchId",
+      "comment": "Links items found in the Firehose to items found in Search",
+      "domainIncludes": [
+        "oa:SessionSeries",
+        "oa:ScheduledSession",
+        "oa:FacilityUse",
+        "oa:Slot"
+      ],
+      "rangeIncludes": [
+        "schema:URL"
+      ]
+    },
+    {
+      "@id": "imin:dataSource",
+      "@type": "Property",
+      "label": "dataSource",
+      "comment": "Data source from which the opportunity originates",
+      "domainIncludes": [
+        "oa:SessionSeries",
+        "oa:FacilityUse"
+      ],
+      "rangeIncludes": [
+        "schema:Dataset"
+      ]
+    },
+    {
+      "@id": "https://imin.co/CustomerCancellationPending",
+      "@type": "oa:OrderItemStatus",
+      "label": "CustomerCancellationPending",
+      "comment": "Customer cancellation pending but not yet complete"
+    }
+  ]
+}
