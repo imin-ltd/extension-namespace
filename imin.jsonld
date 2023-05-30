@@ -165,10 +165,11 @@
       "@id": "imin:dataSource",
       "@type": "Property",
       "label": "dataSource",
-      "comment": "Data source from which the opportunity originates",
+      "comment": "Data source from which the opportunity or error originates",
       "domainIncludes": [
         "oa:SessionSeries",
-        "oa:FacilityUse"
+        "oa:FacilityUse",
+        "oa:OpenBookingError"
       ],
       "rangeIncludes": [
         "schema:Dataset"
