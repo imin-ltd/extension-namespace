@@ -179,6 +179,15 @@
       "@type": "oa:OrderItemStatus",
       "label": "CustomerCancellationPending",
       "comment": "Customer cancellation pending but not yet complete"
+    },
+    {
+      "@id": "imin:NotYetImplementedError",
+      "@type": "Class",
+      "label": "NotYetImplementedError",
+      "subClassOf": [
+        "oa:OpenBookingError"
+      ],
+      "comment": "Error returned when requested functionality is not yet implemented"
     }
   ]
 }
