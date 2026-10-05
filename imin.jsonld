@@ -168,7 +168,9 @@
       "comment": "Data source from which the opportunity originates",
       "domainIncludes": [
         "oa:SessionSeries",
-        "oa:FacilityUse"
+        "oa:ScheduledSession",
+        "oa:FacilityUse",
+        "oa:Slot"
       ],
       "rangeIncludes": [
         "schema:Dataset"
